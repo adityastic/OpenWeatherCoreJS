@@ -103,11 +103,9 @@ function generateChartData(xml) {
           .split(":")[1]
     );
 
-    console.log(allTimes[0]);
     mins.push(parseFloat(allTimes[i].children[4].attributes[2].nodeValue));
     maxs.push(parseFloat(allTimes[i].children[4].attributes[3].nodeValue));
   }
-  console.log(mins);
   generateChart(labels, mins, maxs);
 }
 
