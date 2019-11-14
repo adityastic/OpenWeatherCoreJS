@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div class="small-card-containers">
+        <div class="card-small-left" id="left-card" style="visibility: hidden;">
+          <div class="city-heading" id="currentWeatherHeading">Athlone, IE</div>
+          <div
+            class="curr-container"
+            style="float: left;padding: 0% 5%;margin-top: 5%;"
+          >
+            <div class="curr-wea" style="display: inline;" id="currentWeather">
+              7°
+            </div>
+            <br />
+            <div
+              class="curr-info"
+              style="display: inline;"
+              id="currentWeatherInfo"
+            >
+              Clear Sky<br />
+              2/3
+            </div>
+          </div>
+          <img
+            id="currentWeatherIcon"
+            src="images/weather/night-clear-sky.svg"
+            width="30%"
+            height="30%"
+            style="float: right;padding: 0% 5%;"
+          />
+        </div>
+        <div class="card-small-right">
+          <input
+            type="text"
+            id="cityInp"
+            class="Input-text"
+            placeholder="Search"
+          />
+          <button class="button" onclick="getWeatherFromUser()">
+            Get Weather
+          </button>
+        </div>
+      </div>
+      <div class="card-normal" style="display: none;">
+        <div id="5dayForecast" class="forecast-container"></div>
+        <div class="container">
+          <canvas id="myChart" width="800px" height="400px"></canvas>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/weather-controller.js"></script>
+  <script src="js/chart-controller.js"></script>
+  <script src="js/main.js"></script>
+</html>
