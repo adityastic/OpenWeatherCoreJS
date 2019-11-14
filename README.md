@@ -1,2 +1,2 @@
 # OpenWeatherCoreJS
-Website built on Core Javascript, HTML and CSS.
+Weather Website built on Core Javascript, HTML and CSS.
