@@ -12,8 +12,8 @@ function get5DayWeather(cityOrLat, long) {
   xhttp.open(
     "GET",
     long == undefined
-      ? `http://api.openweathermap.org/data/2.5/forecast?q=${cityOrLat}&mode=xml&units=metric&appid=95d0b55841d67b70908514813581f44c`
-      : `http://api.openweathermap.org/data/2.5/forecast?lat=${cityOrLat}&lon=${long}&mode=xml&units=metric&appid=95d0b55841d67b70908514813581f44c`,
+      ? `https://api.openweathermap.org/data/2.5/forecast?q=${cityOrLat}&mode=xml&units=metric&appid=95d0b55841d67b70908514813581f44c`
+      : `https://api.openweathermap.org/data/2.5/forecast?lat=${cityOrLat}&lon=${long}&mode=xml&units=metric&appid=95d0b55841d67b70908514813581f44c`,
     true
   );
   xhttp.send();
